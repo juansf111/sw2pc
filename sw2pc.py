@@ -11,8 +11,7 @@ def detectDrive():
         if os.path.exists("%s:\\Nintendo" % drive):
             path = "%s:\\nintendo" % drive
             return("%s:\\nintendo" % drive)
-        else:
-            return (None)
+    return (None)
 
 #obtain paths to all of the videos and images as well as the names as well as append them to the lists. Option if videos, images or both are included.
 def getPaths(rootPath, option):
@@ -94,7 +93,7 @@ def copyFiles(paths, option):
 # Main script
 rootPath = detectDrive()
 if rootPath == None:
-    print("No Valid SD card/location was detected. Make sure a valid SD was inserted or the 'Nintendo' folder was copied to the root folder of a drive.")
+    print("No Valid SD card/location was detected. Make sure a valid SD was inserted or the 'Nintendo' folder was copied from the SD card to the root folder of a drive.")
 else:
     print("\nThe files seem to be located at ", rootPath,".")
     # Don't want to take any risk when using this as any error could mess with the contents of the SD card.
